@@ -1,2 +1,2 @@
 # base-sass-library
-A collection of sass functions and components
+A library of sass functions and components

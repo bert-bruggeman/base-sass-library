@@ -1,40 +1,92 @@
-@mixin button($settings) {
+// button component
+@mixin button($type: 'default', $settings: ()) {
 
 
-  // default settings
-  $defaults: (
-    selector: 'input[type="submit"], input[type="reset"], button, .button',
-    padding: spacing(0.6) spacing(0.8),
-    margin: 0 0 .5em,
-    background-color: color(primary),
-    transition: background-color 0.2s ease-in-out,
-
-    hover: (
-      color: color(white),
-      background-color: color(primary, 5),
-    ),
-
-    disabled: (
-      opacity: 0.75
-    ),
-
-  );
+  // default
+  @if $type == 'default' {
 
 
-  // merge settings and defaults map
-  $settings = map-extend($defaults, $settings);
+    // defaults
+    $defaults: (
+      selector: 'input[type="submit"], input[type="reset"], button, .button',
+      padding: spacing(0.6) spacing(0.8),
+      margin: 0 0 .5em,
+      background-color: color(primary),
+      background: null,
+      border-color: null,
+      border-width: null,
+      border-style: null,
+      border-radius: null,
+      text-shadow: null,
+      box-shadow: null,
+      transition: background-color 0.2s ease-in-out,
+
+      hover: (
+        color: color(white),
+        background-color: color(primary, 5),
+        background: null,
+        border-color: null,
+        border-width: null,
+        text-shadow: null,
+        box-shadow: null,
+      ),
+
+      disabled: (
+        opacity: 0.75
+      ),
+
+    );
 
 
-  // default component
-  %button {
-    background-color: map-get($settings, 'background-color'),
+    // merge defaults and settings
+    $settings: map-extend($defaults, $settings);
+
+
+    // add settings to global config map
+    $config: map-merge($config, ('button': $settings)) !global;
+
+
+    // default component
+    #{map-get($settings, 'selector')} {
+      display: block;
+      width: 100%;
+      padding: map-get($settings, 'padding');
+      margin: map-get($settings, 'margin');
+      background-color: map-get($settings, 'background-color');
+      background: map-get($settings, 'background');
+      border-color: map-get($settings, 'border-color');
+      border-width: map-get($settings, 'border-width');
+      border-style: map-get($settings, 'border-style');
+      border-radius: map-get($settings, 'border-radius');
+      transition: map-get($settings, 'transition');
+      cursor: pointer;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: map-deep-get($settings, 'hover', 'color');
+        background-color: map-deep-get($settings, 'hover', 'background-color');
+        background: map-deep-get($settings, 'hover', 'border-background');
+        border-color: map-deep-get($settings, 'hover', 'border-color');
+        border-width: map-deep-get($settings, 'hover', 'border-width');
+        text-shadow: map-deep-get($settings, 'hover', 'text-shadow');
+        box-shadow: map-deep-get($settings, 'hover', 'box-shadow');
+      }
+
+    }
+
   }
 
 
-  // extend default component
-  #{map-get($settings, 'selector')} {
-    @extend %button;
+  // inline
+  @elseif $type == 'inline' {
+    #{map-deep-get($config, 'button', 'selector')} {
+      display: inline-block;
+      width: auto;
+      margin: map-get($settings, 'margin');
+    }
   }
+
 
 
 }

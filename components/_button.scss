@@ -1,0 +1,40 @@
+@mixin button($settings) {
+
+
+  // default settings
+  $defaults: (
+    selector: 'input[type="submit"], input[type="reset"], button, .button',
+    padding: spacing(0.6) spacing(0.8),
+    margin: 0 0 .5em,
+    background-color: color(primary),
+    transition: background-color 0.2s ease-in-out,
+
+    hover: (
+      color: color(white),
+      background-color: color(primary, 5),
+    ),
+
+    disabled: (
+      opacity: 0.75
+    ),
+
+  );
+
+
+  // merge settings and defaults map
+  $settings = map-extend($defaults, $settings);
+
+
+  // default component
+  %button {
+    background-color: map-get($settings, 'background-color'),
+  }
+
+
+  // extend default component
+  #{map-get($settings, 'selector')} {
+    @extend %button;
+  }
+
+
+}

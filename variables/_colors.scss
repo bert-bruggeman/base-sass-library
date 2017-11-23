@@ -1,0 +1,27 @@
+// color palette
+$color-aqua: #7fdbff;
+$color-black: #111111;
+$color-blue: #0074d9;
+$color-fuchsia: #f012be;
+$color-gray:  #aaaaaa;
+$color-green: #2ecc40;
+$color-lime: #01ff70;
+$color-maroon: #85144b;
+$color-navy: #001f3f;
+$color-olive: #3d9970;
+$color-orange: #ff851b;
+$color-purple: #b10dc9;
+$color-red: #ff4136;
+$color-silver: #dddddd;
+$color-teal: #39cccc;
+$color-white: #ffffff;
+$color-yellow: #ffdc00;
+
+// layout colors
+$color-text: lighten($color-black, 10);
+$color-link: $color-blue;
+$color-focus: lighten($color-blue, 10);
+$color-border: lighten($color-gray, 20);
+$color-primary: $color-blue;
+$color-secondary: $color-silver;
+$color-heading: $color-text;

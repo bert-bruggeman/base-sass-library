@@ -1,12 +1,21 @@
 // import functions
 @import
-  "functions/map",
   "functions/unit",
-  "functions/colors",
-  "functions/svg",
-  "functions/layout";
+  "functions/svg";
 
+// import variables
+@import
+  "variables/colors",
+  "variables/layout",
+  "variables/button",
+  "variables/input",
+  "variables/form",
+  "variables/list";
 
 // import components
 @import
-  "components/button";
+  "components/base",
+  "components/button",
+  "components/input",
+  "components/form",
+  "components/list";

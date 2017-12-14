@@ -1,7 +1,9 @@
 @mixin input() {
 
+  $_input-selector: 'input:not([type="submit"]):not([type="reset"]):not([type="radio"]):not([type="checkbox"])';
+
   // default input
-  input:not([type="submit"]):not([type="reset"]),
+  #{$_input-selector},
   select,
   textarea,
   [type="checkbox"] + label:before,
@@ -38,7 +40,7 @@
   }
 
   // input focus
-  input:not([type="submit"]):not([type="reset"]),
+  #{$_input-selector},
   select,
   textarea {
     appearance: none;
@@ -79,6 +81,8 @@
 
     & + label {
       display: inline;
+      font-size: $input-option-font-size;
+      font-weight: $input-option-font-weight;
 
       &:before {
         background-color: $input-option-background-color;
@@ -101,6 +105,10 @@
         white-space: pre;
       }
 
+    }
+
+    &:checked + label:before {
+      background-size: 100%;
     }
 
   }

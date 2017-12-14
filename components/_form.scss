@@ -29,6 +29,10 @@
     display: block;
     font-weight: $label-font-weight;
     margin-bottom: $label-margin-bottom;
+
+    span {
+      color: $color-red;
+    }
   }
 
   // progress

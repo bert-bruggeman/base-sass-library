@@ -6,13 +6,13 @@
   @if (unitless($b)) and not (unitless($n)) {
     $b: em($b);
   }
-  @return decimal-round(($n/$b), 3) * 1em;
+  @return decimal-round(($n/$b), 2) * 1em;
 }
 
 
 // calculate rem
 @function rem($n, $b: $base-font-size) {
-  @return decimal-round(($n/$b), 3) * 1rem;
+  @return decimal-round(($n/$b), 2) * 1rem;
 }
 
 

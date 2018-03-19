@@ -1,0 +1,50 @@
+// input variables
+$input-background: null;
+$input-background-focus: null;
+$input-background-hover: null;
+$input-background-color: $color-white;
+$input-background-color-focus: null;
+$input-background-color-hover: lighten($color-primary, 5);
+$input-border: 1px solid $color-border;
+$input-border-focus: null;
+$input-border-hover: null;
+$input-border-color: null;
+$input-border-color-focus: $color-focus;
+$input-border-color-hover: darken($color-border, 5);
+$input-border-radius: null;
+$input-border-style: null;
+$input-border-width: null;
+$input-border-width-focus: null;
+$input-border-width-hover: null;
+$input-box-shadow: null;
+$input-box-shadow-focus: null;
+$input-box-shadow-hover: null;
+$input-color: $color-text;
+$input-color-focus: null;
+$input-color-hover: $color-white;
+$input-font-weight: $font-weight-medium;
+$input-letter-spacing: null;
+$input-margin: 0 0 $spacing-tiny;
+$input-margin-inline: 0 0 $spacing-tiny;
+$input-padding: $spacing-small;
+$input-additional-selector: '.input';
+$input-text-align: left;
+$input-text-shadow: null;
+$input-text-shadow-focus: null;
+$input-text-shadow-hover: null;
+$input-text-transform: none;
+$input-transition: border-color 0.2s ease-in-out;
+
+// select variables
+$input-select-icon: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="10" height="8"><path d="M10 2L5 8 0 2" fill="#{color(text)}"/></svg>');
+$input-select-icon-padding: .75em;
+
+// option variables (radio & checkbox)
+$input-option-background-color: $color-white;
+$input-option-checkbox-border-radius: null;
+$input-option-checkbox-icon: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"><path d="M0 6.2l2.743 2.743L4.8 11l2.057-2.057L12 3.8 9.943 1.743 4.8 6.886 2.057 4.143 0 6.2z" fill="#{$color-text}"/></svg>');
+$input-option-font-size: $font-size-medium;
+$input-option-font-weight: $font-weight-medium;
+$input-option-margin: -.2em .5em 0 0;
+$input-option-radio-color-checked: $color-focus;
+$input-option-size: $font-size-medium;

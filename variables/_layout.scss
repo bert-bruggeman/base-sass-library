@@ -1,16 +1,7 @@
-// colors
-$color-text: $color-black;
-$color-link: $color-blue;
-$color-focus: darken($color-blue,10);
-$color-border: $color-silver;
-$color-primary: $color-blue;
-$color-secondary: $color-navy;
-$color-heading: $color-black;
-
 // base
 $base-background: null;
 $base-font-size: 16;
-$base-font-family: "Open Sans", Sans;
+$base-font-family: Sans;
 $base-padding: null;
 $base-unit: em;
 
@@ -23,7 +14,7 @@ $font-size-huge: unit(36);
 
 // font-weight
 $font-weight-thin: 300;
-$font-weight-medium: 500;
+$font-weight-medium: 300;
 $font-weight-bold: 600;
 
 // line-height
@@ -32,13 +23,6 @@ $line-height-small: 1.8;
 $line-height-medium: 2;
 $line-height-large: 2.5;
 $line-height-huge: 3;
-
-// headings
-$heading-font-family: null;
-$heading-font-size: unit(28);
-$heading-font-weight: 400;
-$heading-letter-spacing: null;
-$heading-line-height: $line-height-tiny;
 
 // spacing
 $spacing-tiny: unit(8);
@@ -54,3 +38,9 @@ $breakpoint-medium: unit(1024);
 $breakpoint-large: unit(1280);
 $breakpoint-huge: unit(1600);
 
+// headings
+$heading-font-family: null;
+$heading-font-size: unit(28);
+$heading-font-weight: 400;
+$heading-letter-spacing: null;
+$heading-line-height: $line-height-tiny;

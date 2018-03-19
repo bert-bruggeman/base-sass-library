@@ -1,30 +1,25 @@
 // import functions
 @import
-    "functions/unit",
-    "functions/svg";
+  "functions/unit",
+  "functions/svg";
 
 // import variables
 @import
-    "variables/colors",
-    "variables/layout";
+  "variables/colors",
+  "variables/layout",
+  "variables/button",
+  "variables/input",
+  "variables/form",
+  "variables/list",
+  "variables/table",
+  "variables/text-link";
 
-// import styles
+// import components
 @import
-    "base/base",
-    "base/blockquote",
-    "base/button",
-    "effects/focus-effect",
-    "base/input",
-    "base/form",
-    "base/list",
-    "base/table",
-    "base/text-link",
-    "base/keyframes",
-    "base/link",
-    "components/menu",
-    "components/menu";
-
-// import helpers
-@import
-    "helpers/wrap",
-    "helpers/grid";
+  "components/base",
+  "components/button",
+  "components/input",
+  "components/form",
+  "components/list",
+  "components/table",
+  "components/text-link";

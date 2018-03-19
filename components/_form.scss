@@ -1,0 +1,44 @@
+@mixin form() {
+
+  // form item
+  #{$form-item-selector} {
+    margin: $form-item-margin;
+  }
+
+  // fieldset
+  fieldset {
+    background-color: $fieldset-background-color;
+    border: $fieldset-border;
+    margin: $fieldset-margin;
+    padding: $fieldset-padding;
+  }
+
+  // legend
+  legend {
+    color: inherit;
+    display: table;
+    font-weight: $legend-font-weight;
+    margin-bottom: $legend-margin-bottom;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal;
+  }
+
+  // label
+  label {
+    display: block;
+    font-weight: $label-font-weight;
+    margin-bottom: $label-margin-bottom;
+
+    span {
+      color: $color-red;
+    }
+  }
+
+  // progress
+  progress {
+    display: inline-block;
+    vertical-align: baseline;
+  }
+
+}

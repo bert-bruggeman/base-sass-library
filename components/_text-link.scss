@@ -1,0 +1,16 @@
+@mixin text-link() {
+  #{$text-link-selector} {
+    border-bottom: $text-link-border-bottom;
+    color: $text-link-color;
+    display: inline-block;
+    line-height: $text-link-line-height;
+
+    &:focus,
+    &:active,
+    &:hover {
+      border-bottom-color: $text-link-border-bottom-color-focus;
+      color: $text-link-color-focus;
+    }
+
+  }
+}

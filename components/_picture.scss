@@ -1,6 +1,6 @@
 @mixin picture {
 
-    img {
+    img.lazyload {
         opacity: 0;
     }
 
@@ -15,6 +15,13 @@
             background-color: $color-gray;
             overflow: hidden;
         }
+        
+        img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+        }
     }
 
 }
@@ -23,13 +30,6 @@
 @mixin picture-loaded (
     $animation: imageFadeIn
 ) {
-
-    picture > img {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-    }
 
     @if $animation == imageFadeIn {
         @keyframes imageFadeIn {

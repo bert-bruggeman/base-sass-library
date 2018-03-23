@@ -1,9 +1,5 @@
 @mixin picture {
 
-    img.lazyload {
-        opacity: 0;
-    }
-
     picture {
         display: block;
         position: relative;
@@ -17,6 +13,7 @@
         }
         
         img {
+            opacity: 0;
             position: absolute;
             left: 0;
             top: 0;

@@ -12,7 +12,7 @@
     $border-color: null,
     $border-color-focus: $color-focus,
     $border-color-hover: darken($color-border, 5),
-    $border-radius: null,
+    $border-radius: 0,
     $border-style: null,
     $border-width: null,
     $border-width-focus: null,
@@ -51,12 +51,10 @@
     $option-size: $font-size-medium
 ) {
 
-    $_input-selector: 'input:not([type="submit"]):not([type="reset"]):not([type="radio"]):not([type="checkbox"])';
+    $_input-selector: '.input';
 
     // default input
     #{$_input-selector},
-    select,
-    textarea,
     [type="checkbox"] + label:before,
     [type="radio"] + label:before {
         background: $background;
@@ -91,9 +89,7 @@
     }
 
     // input focus
-    #{$_input-selector},
-    select,
-    textarea {
+    #{$_input-selector} {
         appearance: none;
 
         &:active,

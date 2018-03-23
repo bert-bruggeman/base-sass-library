@@ -1,0 +1,54 @@
+@mixin picture {
+
+    img {
+        opacity: 0;
+    }
+
+    picture {
+        display: block;
+        position: relative;
+
+        &:before {
+            content: "";
+            display: block;
+            width: 100%;
+            background-color: $color-gray;
+            overflow: hidden;
+        }
+    }
+
+}
+
+// page loaded (non-critical)
+@mixin picture-loaded (
+    $animation: imageFadeIn
+) {
+
+    picture > img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+
+    @if $animation == imageFadeIn {
+        @keyframes imageFadeIn {
+          50%   { opacity: 0; }
+          100%  { opacity: 1; }
+        }
+    }
+
+    img.lazyloaded {
+        animation: $animation 1s forwards;
+    }
+
+}
+
+@mixin picture-ratio (
+    $width: 1,
+    $height: 1
+) {
+    picture:before {
+        padding-top: ($height / $width) * 100%;
+    }
+}

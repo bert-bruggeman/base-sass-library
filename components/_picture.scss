@@ -1,7 +1,6 @@
 @mixin picture {
 
-    img.lazyload,
-    img.lazyloaded {
+    img {
         opacity: 0;
     }
 

@@ -3,7 +3,6 @@
     font-family: $font-family;
     font-weight: $weight;
     font-style: $style;
-    src:  url('#{$file-path}.woff2') format('woff2'),
-          url('#{$file-path}.woff') format('woff');
+    src:  asset_url('#{$file-path}.woff2') format('woff2'), asset_url('#{$file-path}.woff') format('woff');
   }
 }

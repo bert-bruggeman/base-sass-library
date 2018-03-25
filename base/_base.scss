@@ -38,6 +38,7 @@
         letter-spacing: $heading-letter-spacing;
         line-height: $heading-line-height;
         margin: unit($spacing-medium, $heading-font-size) 0;
+        text-transform: $heading-text-transform;
     }
 
     p,

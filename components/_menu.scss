@@ -3,6 +3,7 @@
     $background: null,
     $margin: null,
     $padding: null,
+    $font-size: null,
     $selector: "body > nav"
 ) {
     #{$selector} {
@@ -11,6 +12,7 @@
         padding: $padding;
 
         a {
+            font-size: $font-size;
             display: block;
         }
 

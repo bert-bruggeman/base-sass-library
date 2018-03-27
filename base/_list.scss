@@ -2,6 +2,7 @@
 @mixin list (
     $margin: $spacing-medium 0,
     $parent-selector: 'article',
+    $selector-suffix: ':not(".unstyled")',
     $number-color: $color-text,
     $number-font-size: 80%,
     $number-font-weight: 700,
@@ -19,8 +20,8 @@
 ) {
     #{$parent-selector} {
 
-        & ul,
-        & ol {
+        & ul#{$parent-selector},
+        & ol#{$parent-selector} {
             margin: $margin;
 
             & > li {
@@ -43,7 +44,7 @@
 
 
         // ol
-        & ol {
+        & ol#{$parent-selector} {
             counter-reset: list-counter;
 
             & > li {
@@ -64,7 +65,7 @@
 
 
         // ul
-       & ul {
+       & ul#{$parent-selector} {
 
             & > li {
                 padding-left: $bullet-spacing + $bullet-font-size;

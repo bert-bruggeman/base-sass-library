@@ -2,6 +2,7 @@
 @mixin menu (
     $background: null,
     $margin: null,
+    $height: null;
     $padding: null,
     $font-size: null,
     $selector: "body > nav"
@@ -14,6 +15,7 @@
         a {
             font-size: $font-size;
             display: block;
+            height: $height;
         }
 
         & > ul {
